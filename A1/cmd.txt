@@ -1,0 +1,17 @@
+cd \git\sauleh\ds98
+mkdir A1
+cd A1
+dotnet new sln
+dotnet sln add ..\TestCommon\TestCommon.csproj
+mkdir A1
+cd A1
+dotnet new console
+dotnet add reference ..\..\TestCommon\TestCommon.csproj
+cd ..
+dotnet sln add A1\A1.csproj
+mkdir A1.Tests
+cd A1.Tests
+dotnet new mstest
+dotnet add reference ..\A1\A1.csproj
+cd ..
+dotnet sln add A1.Tests\A1.Tests.csproj
